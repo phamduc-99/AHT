@@ -1,0 +1,33 @@
+.col (@number){
+    width: @number;
+    padding: 0 15px;
+    margin: 15px 0;
+    box-sizing: border-box;
+}
+.flexbox() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.transform (@x:-50%,@y:-50%) {
+	-webkit-transform: translate(@x,@y);
+	   -moz-transform: translate(@x,@y);
+	    -ms-transform: translate(@x,@y);
+	     -o-transform: translate(@x,@y);
+			transform: translate(@x,@y);
+		    	
+}
+.transformer(@x) {
+    transform: @x;
+    -webkit-transform: @x;
+	   -moz-transform: @x;
+	    -ms-transform: @x;
+	     -o-transform: @x;
+}
+.transition(@x,@y) {
+    transition: @x, @y;
+    -webkit-transition: @x, @y;
+	   -moz-transition: @x, @y;
+	    -ms-transition: @x, @y;
+	     -o-transition: @x, @y;
+}

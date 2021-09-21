@@ -1,0 +1,120 @@
+.cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: @text-header;
+    opacity: 0;
+    z-index: -1;
+}
+.cover.active {
+    opacity: 0.8;
+    z-index: 100;
+    .transition(all, 0.5s);
+}
+.header {
+    &-top {
+        background-color: @bg-header;
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 14px;
+        color: @text-header;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        line-height: 1.5;
+        text-align: left;
+        &-inner {
+            .flexbox();
+            margin: 0 15px;
+            .message {
+                display: flex;
+                &-icon {
+                    margin-right: 5px;
+                }
+                &-content {
+                    letter-spacing: 0.01em;
+                }              
+            }
+            .menu-link {
+                display: flex;
+                &-button{
+                    margin-left: 30px;
+                    display: flex;
+                    a {
+                        display: flex;
+                        color: @text-header;
+                        letter-spacing: 0.01em;
+                        
+                        &:hover {
+                            color: @color-bg;
+                        }
+                    }
+                    .menu-link-description {
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .menu{
+        font-family: 'Montserrat';
+        font-size: 14px;
+        font-weight: 700;
+        color: @color-title;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        &-inner{
+            .flexbox();
+            padding: 0 15px;
+            nav {
+                flex: 1;
+                .nav-icon {
+                    display: none;
+                }
+                .navbar {
+                    //  margin-bottom: 5px;
+                    //  margin-right: 75px;
+                    display: flex;
+                    justify-content: center;
+                    margin-left: -119px;
+                    margin-bottom: 2px;
+                    li {
+                        .nav-title {
+                            display: none;
+                        }
+                        margin-left: 27px;
+                        margin-right: 28px;
+                        a{
+                            text-transform: uppercase;
+                            // letter-spacing: 0.01em;
+                            line-height: 1.5;
+                            
+                            &:hover {
+                                color: @color-main;
+                            }
+                        }
+                        &:first-child {
+                            margin-left: -27px;
+                        }
+
+                    }
+                    .nav-title {
+                        display: none;
+                    }
+                }
+            }
+            .menu-icon {
+                display: flex;
+                font-size: 27px;
+                &-cart {
+                    margin-left: 30px;
+                }
+                a:hover {
+                    color: @color-main;
+                }
+            }
+        }
+    }
+}
