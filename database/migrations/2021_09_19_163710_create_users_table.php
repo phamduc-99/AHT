@@ -20,7 +20,6 @@ class CreateUsersTable extends Migration
             $table->string('fullname',100);
             $table->string('address', 255)->nullable();
             $table->string('phone');
-            $table->integer('admin');
             $table->timestamps();
         });
     }

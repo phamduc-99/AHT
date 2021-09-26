@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Hash;
 class User extends Authenticatable
 {
    protected $fillable = [
-        'fullname', 'email', 'phone','address'
+        'fullname', 'email', 'phone','address', 
    ];
  /**
      * The attributes that should be hidden for arrays.
@@ -35,6 +35,10 @@ class User extends Authenticatable
    public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = Hash::make($value);
+    }
+
+    public function order(){
+        return $this->hasMany(Oder::class);
     }
 
 }

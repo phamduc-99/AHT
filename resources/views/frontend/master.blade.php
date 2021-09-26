@@ -64,24 +64,28 @@
             <div class="menu">
                 <div class="container-fluid">
                     <div class="menu-inner">
-                        <div class="logo"><a href=""><img src="image/logo.jpg" alt=""></a></div>
+                        <div class="logo"><a href="{{route('frontend.index')}}"><img src="image/logo.jpg" alt=""></a></div>
                         <nav>
-                            <div class="nav-icon"><a href=""><i class="fas fa-bars"></i></a></div>
+                            <div class="nav-icon"><a href="{{route('frontend.index')}}"><i class="fas fa-bars"></i></a></div>
                             <ul class = "navbar">
                                 <li class="nav-title">Menu</li>
-                                <li><a href="">Home</a></li>
-                                <li><a href="">Women</a></li>
-                                <li><a href="">Men</a></li>
-                                <li><a href="">About us</a></li>
-                                <li><a href="">Blog</a></li>
-                                <li><a href="">Collections</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li><a href="{{route('frontend.index')}}">Home</a></li>
+                                <li><a href="{{route('product.show',['categoryName' => 'Nam'])}}">Women</a></li>
+                                <li><a href="{{route('product.show',['categoryName' => 'Nữ'])}}">Men</a></li>
+                                <li><a href="{{route('product.all')}}">All</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Collections</a></li>
+                                <li><a href="{{route('user.login')}}">My acount</a></li>
                                 <li><a href=""><i class="fas fa-search"></i></a></li>
                             </ul>
                         </nav>
                         <div class="menu-icon">
                             <div class="menu-icon-heart"><a href="#"><i class="pe-7s-like heart-icon"></i></a></div>
-                            <div class="menu-icon-cart"><a href="#"><i class="pe-7s-cart cart-icon"></i></a></div>
+                            <div class="menu-icon-cart"><a href="{{route('cart')}}" style="front-size:8px"><i class="pe-7s-cart cart-icon" ></i>
+                                @if(session('count'))
+                                <small>({{session('count')}})</small>
+                                @endif
+                            </a></div>
                         </div>
                     </div>
                 </div>
@@ -180,6 +184,9 @@
         <!-- End Footer -->
     </div>
 
+@section('script')
+    
+
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
     <script src="assets\js\vendor\jquery-1.12.0.min.js"></script>
@@ -188,5 +195,7 @@
     <script src="assets\js\ajax-mail.js"></script>
     {{--  <script src="assets\js\plugins.js"></script>  --}}
     <script src="assets\js\main.js"></script>
+
+@show
 </body>
 </html>

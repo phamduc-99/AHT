@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Backend;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -15,5 +15,8 @@ class Product extends Model
     }
     public function image(){
         return $this->hasMany(Image::class);
+    }
+    public function comment(){
+        return $this->hasMany(Comment::class);
     }
 }

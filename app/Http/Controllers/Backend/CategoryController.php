@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Backend\Category;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use App\Http\Requests\RequestAddCategory;
 use App\Http\Requests\RequestEditCategory;

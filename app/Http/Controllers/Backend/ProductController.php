@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RequestAddProduct;
 use App\Http\Requests\RequestEditProduct;
-use App\Models\Backend\Category;
-use App\Models\Backend\Product;
-use App\Models\Backend\Image;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\Image;
 use Illuminate\Support\Str;
 
 use Illuminate\Http\Request;
@@ -20,7 +20,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::paginate(5);
         return view('backend\listproduct', compact('products'));
     }
 

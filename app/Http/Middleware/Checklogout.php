@@ -17,8 +17,8 @@ class Checklogout
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::guest()){
-            return redirect()->route('login.index');
+        if(Auth::guard('admin')->guest()){
+            return redirect()->route('admin.login.index');
         }
         return $next($request);
     }
