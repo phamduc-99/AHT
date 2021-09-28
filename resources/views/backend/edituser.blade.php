@@ -56,13 +56,6 @@
                                             <strong>{{ $errors->first('phone') }}</strong>
                                         </div>
                                     @endif
-                                    <div class="form-group">
-                                        <label>Level</label>
-                                        <select name="level" class="form-control" value="">
-                                            <option @if ($user->admin == 1)  selected @endif value="1">admin</option>
-                                            <option @if ($user->admin == 2)  selected @endif value="2">user</option>
-                                        </select>
-                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-8 col-lg-8 col-lg-offset-2 text-right">

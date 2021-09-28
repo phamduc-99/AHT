@@ -46,7 +46,6 @@
                                             <th>Full</th>
                                             <th>Address</th>
                                             <th>Phone</th>
-                                            <th>Admin</th>
                                             <th width='18%'>Tùy chọn</th>
                                         </tr>
                                     </thead>
@@ -58,13 +57,6 @@
                                                 <td>{{ $user->fullname }}</td>
                                                 <td>{{ $user->address }}</td>
                                                 <td>{{ $user->phone }}</td>
-                                                <td>
-                                                    @if ($user->admin == 1)
-                                                        Yes
-                                                    @else
-                                                        No
-                                                    @endif
-                                                </td>
                                                 <td>
                                                     <a href="{{ route('user.edit', ['user' => $user->id]) }}"
                                                         class="btn btn-warning"><i class="fa fa-pencil"

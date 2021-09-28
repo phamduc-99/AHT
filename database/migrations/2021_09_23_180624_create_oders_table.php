@@ -17,7 +17,7 @@ class CreateOdersTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->float('total');
+            $table->float('total',12,2);
             $table->integer('state');
             $table->timestamps();
         });
