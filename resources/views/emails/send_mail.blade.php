@@ -19,8 +19,8 @@
         </tr>
             @foreach($data->orderdetail as $key=>$detail)
             <tr>
-            <td width="70%">{{$detail->name}} đ</td>
-            <td width="10%">{{$detail->quantity}} đ</td>
+            <td width="70%">{{$detail->name}}</td>
+            <td width="10%">{{$detail->quantity}}</td>
             <td width="20%">{{$detail->quantity*$detail->price}} đ</td>
             </tr>
             @endforeach
