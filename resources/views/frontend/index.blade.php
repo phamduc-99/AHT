@@ -63,7 +63,7 @@
                                     <a href="{{ route('product.detail', ['slug' => $product->slug]) }}">
                                         <img src="../image/{{ $product->image()->orderBy('id')->first()->img }}" alt="">
                                     </a>
-                                    <a class="button" href="{{ route('cart.add', ['slug' => $product->slug]) }}">add
+                                    <a class="button1" href="{{ route('cart.add', ['slug' => $product->slug]) }}">add
                                         to cart</a>
                                         <div class="img_icone">
                                             @if($product->featured == 2)

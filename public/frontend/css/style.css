@@ -332,7 +332,7 @@ ul li {
 .main-content .item .content .item-content .item-img img:hover {
   transform: scale(1.2);
 }
-.main-content .item .content .item-content .item-img .button {
+.main-content .item .content .item-content .item-img .button1 {
   font-weight: 400;
   font-size: 12px;
   color: #424242;
@@ -932,6 +932,11 @@ footer .copyright-cards .row-copy-card .cards ul li i:hover {
   }
   .header .menu-inner .logo {
     right: 28%;
+    left: 0%;
+    top: -30%;
+  }
+  .header .menu-inner .logo img {
+    width: 30%;
   }
   .header .menu-inner nav .navbar {
     width: 50vw;
@@ -1008,7 +1013,6 @@ footer .copyright-cards .row-copy-card .cards ul li i:hover {
   }
   .header .menu-inner .logo {
     right: 0%;
-    left: 30%;
   }
   .header .menu-inner .logo img {
     width: 50%;

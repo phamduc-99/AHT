@@ -18,7 +18,7 @@ class CheckComment
     public function handle(Request $request, Closure $next)
     {
         
-        if(Auth::guard()){
+        if(Auth::guest()){
             session()->flash('error','Bạn chưa đăng nhập');
             return redirect()->back();
         }
